@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane hgap="10.0" prefHeight="391.0" prefWidth="731.0" stylesheets="@application.css" vgap="10.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MakePizzaController">
+   <columnConstraints>
+      <ColumnConstraints maxWidth="194.66666920979816" minWidth="0.0" prefWidth="13.666655540466309" />
+      <ColumnConstraints maxWidth="194.66666920979816" minWidth="71.0" prefWidth="120.6666768391927" />
+      <ColumnConstraints maxWidth="154.66662597656247" minWidth="3.3333307902018134" prefWidth="140.66670735677084" />
+      <ColumnConstraints maxWidth="400.0" minWidth="0.0" prefWidth="344.6666259765625" />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="100.0" />
+      <RowConstraints minHeight="10.0" prefHeight="100.0" />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints maxHeight="17.33333333333333" minHeight="17.33333333333333" prefHeight="17.33333333333333" />
+      <RowConstraints maxHeight="17.33333333333333" minHeight="17.33333333333333" prefHeight="17.33333333333333" />
+      <RowConstraints maxHeight="17.33333333333333" minHeight="17.33333333333333" prefHeight="17.33333333333333" />
+      <RowConstraints maxHeight="17.33333333333333" minHeight="17.33333333333333" prefHeight="17.33333333333333" />
+      <RowConstraints maxHeight="17.33333333333333" minHeight="17.33333333333333" prefHeight="17.33333333333333" />
+      <RowConstraints maxHeight="17.33333333333333" minHeight="17.33333333333333" prefHeight="17.33333333333333" />
+      <RowConstraints maxHeight="17.33333333333333" minHeight="17.33333333333333" prefHeight="17.33333333333333" />
+      <RowConstraints maxHeight="17.33333333333333" minHeight="17.33333333333333" prefHeight="30.0" />
+      <RowConstraints maxHeight="17.33333333333333" minHeight="17.33333333333333" prefHeight="30.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+   </rowConstraints>
+   <children>
+      <ChoiceBox fx:id="boxSize" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Label prefHeight="17.0" prefWidth="118.0" text="Choose a Size:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label text="Vegetarian?" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <HBox prefHeight="0.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <children>
+            <RadioButton id="vegetarian" fx:id="buttonYesVeg" mnemonicParsing="false" text="Yes">
+               <toggleGroup>
+                  <ToggleGroup fx:id="vegetarianGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton id="vegetarian" fx:id="buttonNoVeg" mnemonicParsing="false" text="No" toggleGroup="$vegetarianGroup" />
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </HBox>
+      <Label text="Toppings:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Label text="     Cheese" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <Label text="     Pineapple" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <Label text="     Green Pepper" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <Label text="     Ham" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+      <ChoiceBox fx:id="boxCheese" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+      <HBox prefHeight="0.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+         <children>
+            <RadioButton id="pineapple" fx:id="buttonNonePineapple" mnemonicParsing="false" selected="true" text="None">
+               <toggleGroup>
+                  <ToggleGroup fx:id="pineappleGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton id="pineapple" fx:id="buttonSinglePineapple" mnemonicParsing="false" text="Single" toggleGroup="$pineappleGroup" />
+         </children>
+      </HBox>
+      <HBox prefHeight="0.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+         <children>
+            <RadioButton id="pepper" fx:id="buttonNonePepper" mnemonicParsing="false" selected="true" text="None">
+               <toggleGroup>
+                  <ToggleGroup fx:id="pepperGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton id="pepper" fx:id="buttonSinglePepper" mnemonicParsing="false" text="Single" toggleGroup="$pepperGroup" />
+         </children>
+      </HBox>
+      <HBox prefHeight="0.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="2" GridPane.rowIndex="9">
+         <children>
+            <RadioButton id="ham" fx:id="buttonNoneHam" mnemonicParsing="false" selected="true" text="None">
+               <toggleGroup>
+                  <ToggleGroup fx:id="hamGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton id="ham" fx:id="buttonSingleHam" mnemonicParsing="false" text="Single" toggleGroup="$hamGroup" />
+         </children>
+      </HBox>
+      <Button fx:id="buttonPlaceOrder" defaultButton="true" mnemonicParsing="false" onAction="#btnOnClick" text="Place Order" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+      <Label text="Quantity: " GridPane.columnIndex="1" GridPane.rowIndex="11" />
+      <TextField fx:id="textInputQuantity" prefHeight="25.0" prefWidth="137.0" promptText="Number of Pizzas to be Ordered" text="1" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+      <Label fx:id="labelCostQuantityNum" text="Cost for 1 Pizza(s):" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+      <Label text="Cost: " GridPane.columnIndex="1" GridPane.rowIndex="10" />
+      <Label fx:id="labelCost" prefHeight="17.0" prefWidth="49.0" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+      <Label fx:id="labelCostQuantity" prefHeight="17.0" prefWidth="65.0" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+      <TextArea fx:id="textOrderDisplay" editable="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="264.0" prefWidth="384.0" promptText="Your order will appear here!" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.rowSpan="10" />
+      <Label fx:id="labelTotalCost" text="Total Cost: " GridPane.columnIndex="3" GridPane.rowIndex="13" />
+      <Label fx:id="labelCustomize" alignment="CENTER" prefHeight="17.0" prefWidth="611.0" text="Customize Your Pizza!" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="1" GridPane.rowSpan="2">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+   </padding>
+</GridPane>
